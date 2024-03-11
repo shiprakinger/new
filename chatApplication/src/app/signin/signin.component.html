@@ -1,0 +1,33 @@
+<div class="chat-box">
+  
+  
+    <h2 class="chat-heading">Spring WebSocket Chat Demo</h2>
+    <hr>
+    <div class="chat-container">
+      <div class="message-list">
+      
+<!-- <div *ngFor="let message of messages">
+  {{ message.body }}
+</div>
+
+<input type="text" #inputMessage (keyup.enter)="sendMessage(inputMessage.value)">
+<button (click)="sendMessage(inputMessage.value)">Send</button> -->
+
+        <div *ngFor="let message of messages" class="message" [ngClass]="{'from': message.author === 'bot', 'to': message.author === 'user'}">
+          <img *ngIf="message.author === 'user'" src="assets/profile.webp" class="avatar">
+          <img *ngIf="message.author === 'bot'" src="assets/gpt.jpg" class="avatar">
+          <div class="message-content">{{ message.content }}</div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="input-container">
+      <input [(ngModel)]="value" (keyup.enter)="sendMessage()" type="text" class="message-input" placeholder="Enter your message">
+      <button class="send-button" (click)="sendMessage()">Send</button>
+    </div>
+    
+    <!-- <p>Data from parent: {{ childData }}</p> -->
+    
+  </div>
+  
+  

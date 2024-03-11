@@ -1,0 +1,20 @@
+<div class="container">
+  
+  <div class="col-md-12 text-center">
+    <h2 class="heading">Type Your Username<br>To Enter The Chatroom</h2>
+    <ul class="message-list">
+      <li *ngFor="let message of messages; let i = index" [ngClass]="{'from': i % 2 === 0, 'to': i % 2 !== 0}">
+        {{ message }}
+      </li>
+    </ul>
+  </div>
+  
+  <div class="col-md-12 text-center">
+    <input type="text" [(ngModel)]="username" class="form-control" placeholder="Enter your username"><br>
+    <button class="btn btn-primary" (click)="sendMessage()">Start Chatting</button><br>
+
+  </div>
+ 
+ 
+</div>
+<!-- <app-signin [childData]="parentData"></app-signin> -->

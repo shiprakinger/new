@@ -1,0 +1,70 @@
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 100px;
+    margin-left: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px; 
+    height: 100%; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    border: 2px solid white; 
+}
+
+.col-md-12.text-center {
+    text-align: center;
+}
+
+.message {
+    border-radius: 10px; 
+    margin: 0 0 20px; 
+    padding: 10px 20px;
+    position: relative;
+    font-size: 20px;
+}
+
+.message.to {
+    background-color: #2095FE;
+    color: #fff;
+}
+
+.message.from {
+    background-color: #E5E4E9;
+    color: #363636;
+}
+
+.btn-primary {
+    background-color: green;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 20px;
+    border-color: transparent;
+    margin-top: 5px;
+}
+
+.form-control {
+    width: 300px; 
+    height: 40px; 
+    font-size: 16px; 
+}
+
+.form-control, .btn-primary {
+    margin-bottom: 10px; 
+}
+
+.float-right {
+    margin-top: 10px; 
+}
+
+.heading {
+    line-height: 1.5;
+}
